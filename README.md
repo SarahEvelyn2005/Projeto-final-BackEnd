@@ -2,7 +2,7 @@
 
 [[Projeto final](https://github.com/SarahEvelyn2005/Projeto-final-BackEnd)]Este repositório contém o código-fonte da API REST desenvolvida para a disciplina de **Construção de Backend**, ministrada pelo Prof. Gustavo Clay[cite: 1, 2].
 
-O projeto consiste em um backend para um **Marketplace (E-commerce)**, onde é possível gerenciar usuários, produtos, pedidos, pagamentos e avaliações. [cite_start]O sistema implementa validações rigorosas, relacionamentos entre entidades e boas práticas de arquitetura MVC[cite: 56, 4].
+O projeto consiste em um backend para um **Marketplace (E-commerce)**, onde é possível gerenciar usuários, produtos, pedidos, pagamentos e avaliações. O sistema implementa validações rigorosas, relacionamentos entre entidades e boas práticas de arquitetura MVC[cite: 56, 4].
 
 ## 🛠 Tecnologias Utilizadas [cite: 69]
 
@@ -137,4 +137,4 @@ Abaixo descrevemos a participação de cada membro na construção do projeto, i
 
 ---
 
-[cite_start]**Data de Entrega:** 21/11 [cite: 104]
+**Data de Entrega:** 21/11
