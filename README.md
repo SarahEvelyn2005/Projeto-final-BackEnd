@@ -1,6 +1,6 @@
 # TRABALHO PRÁTICO A2 - API Marketplace (ADS28)
 
-[span_0](start_span)Este repositório contém o código-fonte da API REST desenvolvida para a disciplina de **Construção de Backend**, ministrada pelo Prof. Gustavo Clay[span_0](end_span).
+[Projeto-final-BackEnd/ at main · SarahEvelyn2005/Projeto-final-BackEnd https://share.google/zFZXfhJh24P07gACO](start_span)Este repositório contém o código-fonte da API REST desenvolvida para a disciplina de **Construção de Backend**, ministrada pelo Prof. Gustavo Clay[span_0](end_span).
 
 O projeto consiste em um backend para um **Marketplace (E-commerce)**, onde é possível gerenciar usuários, produtos, pedidos, pagamentos e avaliações. [span_1](start_span)[span_2](start_span)O sistema implementa validações rigorosas, relacionamentos entre entidades e boas práticas de arquitetura MVC[span_1](end_span)[span_2](end_span).
 
