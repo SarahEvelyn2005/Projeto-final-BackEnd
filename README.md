@@ -1,21 +1,21 @@
 # TRABALHO PRÁTICO A2 - API Marketplace (ADS28)
 
-[[Projeto final](https://github.com/SarahEvelyn2005/Projeto-final-BackEnd)]Este repositório contém o código-fonte da API REST desenvolvida para a disciplina de **Construção de Backend**, ministrada pelo Prof. Gustavo Clay[cite: 1, 2].
+[[Projeto final](https://github.com/SarahEvelyn2005/Projeto-final-BackEnd)]Este repositório contém o código-fonte da API REST desenvolvida para a disciplina de **Construção de Backend**, ministrada pelo Prof. Gustavo Clay.
 
-O projeto consiste em um backend para um **Marketplace (E-commerce)**, onde é possível gerenciar usuários, produtos, pedidos, pagamentos e avaliações. O sistema implementa validações rigorosas, relacionamentos entre entidades e boas práticas de arquitetura MVC[cite: 56, 4].
+O projeto consiste em um backend para um **Marketplace (E-commerce)**, onde é possível gerenciar usuários, produtos, pedidos, pagamentos e avaliações. O sistema implementa validações rigorosas, relacionamentos entre entidades e boas práticas de arquitetura MVC.
 
-## 🛠 Tecnologias Utilizadas [cite: 69]
+### 🛠 Tecnologias Utilizadas 
 
 - **Node.js** & **Express**: Estrutura base da API.
-- **MongoDB Atlas**: Banco de dados NoSQL em nuvem[cite: 17].
-- **Mongoose**: ODM para modelagem de dados e relacionamentos[cite: 20].
-- **Yup**: Middleware para validação de dados de entrada[cite: 6, 49].
-- **Dotenv**: Gerenciamento de variáveis de ambiente[cite: 19].
-- **Git/GitHub**: Versionamento e colaboração[cite: 9].
+- **MongoDB Atlas**: Banco de dados NoSQL em nuvem.
+- **Mongoose**: ODM para modelagem de dados e relacionamentos.
+- **Yup**: Middleware para validação de dados de entrada.
+- **Dotenv**: Gerenciamento de variáveis de ambiente.
+- **Git/GitHub**: Versionamento e colaboração.
 
 ---
 
-## 🗂 Modelagem de Dados
+### 🗂 Modelagem de Dados
 
 O banco de dados conta com **10 Collections** relacionadas, atendendo ao requisito de complexidade do projeto.
 
@@ -40,7 +40,7 @@ O banco de dados conta com **10 Collections** relacionadas, atendendo ao requisi
 
 ---
 
-##🚀 Instalação e Execução
+###🚀 Instalação e Execução
 
 ### Pré-requisitos
 
@@ -81,7 +81,7 @@ O banco de dados conta com **10 Collections** relacionadas, atendendo ao requisi
 
 ---
 
-## 📡 Principais Endpoints [cite: 72]
+## 📡 Principais Endpoints
 
 A documentação completa, incluindo exemplos de JSON (Body) e respostas, pode ser importada no **Postman** através do arquivo `.json` disponível na raiz deste projeto.
 
