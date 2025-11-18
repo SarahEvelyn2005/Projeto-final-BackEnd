@@ -9,7 +9,7 @@ const ProductController = require("./controllers/ProductController");
 // Importar Middlewares de Validação
 const validateUser = require("./middlewares/validateUser");
 const validateOrder = require("./middlewares/validateOrder");
-const validateProduct = require("./middlewares/validateProduct");
+const validateProduct = require("./middlewares/validateProducto");
 
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
