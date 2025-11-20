@@ -12,14 +12,17 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    category: {
-        type: String,
-        required: true,
-    },
+    
     // RELACIONAMENTO: Referência ao ID do Usuário (Vendedor)
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User', // Nome do Model referenciado
+        required: true
+    },
+    // RELACIONAMENTO: Referência ao ID da Categoria
+    category_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category', // Nome do Model referenciado
         required: true
     }
 }, { timestamps: true });
