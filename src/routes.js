@@ -8,7 +8,7 @@ const ProductController = require("./controllers/ProductController");
 const CategoryController = require("./controllers/CategoryController");
 const SupplierController = require("./controllers/SupplierController");
 const AddressController = require("./controllers/AddressController");
-const CouponController = require("./controllers/CouponController");
+const CuponsController = require("./controllers/CuponsController");
 
 // Importar Middlewares de Validação
 const validateUser = require("./middlewares/validateUser");
@@ -17,7 +17,7 @@ const validateProduct = require("./middlewares/validateProduct");
 const validateCategory = require("./middlewares/validateCategory");
 const validateSupplier = require("./middlewares/validateSupplier");
 const validateAddress = require("./middlewares/validateAddress");
-const validateCoupon = require("./middlewares/validateCoupon");
+const validateCupons = require("./middlewares/validateCupons");
 
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
@@ -50,11 +50,11 @@ routes.get("/suppliers/:id", SupplierController.getById);
 routes.put("/suppliers/:id", validateSupplier, SupplierController.update);
 routes.delete("/suppliers/:id", SupplierController.delete);
 // --- ROTAS DE CUPONS ---
-routes.post("/coupons", validateCoupon, CouponController.create);
-routes.get("/coupons", CouponController.getAll);
-routes.get("/coupons/:id", CouponController.getById);
-routes.put("/coupons/:id", validateCoupon, CouponController.update);
-routes.delete("/coupons/:id", CouponController.delete);
+routes.post("/cupons", validateCupons, CuponsController.create);
+routes.get("/cupons", CuponsController.getAll);
+routes.get("/cupons/:id", CuponsController.getById);
+routes.put("/cupons/:id", validateCupons, CuponsController.update);
+routes.delete("/cupons/:id", CuponsController.delete);
 // --- ROTAS DE ENDEREÇOS ---
 routes.post("/address", validateAddress, AddressController.create);
 routes.get("/address", AddressController.getAll);
