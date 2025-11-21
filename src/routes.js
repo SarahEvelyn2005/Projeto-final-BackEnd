@@ -61,5 +61,28 @@ routes.get("/address", AddressController.getAll);
 routes.get("/address/:id", AddressController.getById);
 routes.put("/address/:id", validateAddress, AddressController.update);
 routes.delete("/address/:id", AddressController.delete);
+// --- ROTAS DE PAGAMENTOS ---
+routes.post("/payments", validatePayment, PaymentController.create);
+routes.get("/payments", PaymentController.getAll);
+routes.get("/payments/:id", PaymentController.getById);
+routes.put("/payments/:id/status", validatePaymentStatus, PaymentController.updateStatus);
+routes.delete("/payments/:id", PaymentController.delete);
+routes.post("/payments/webhook", PaymentController.processWebhook);
+// --- ROTAS DE AVALIAÇÕES ---
+routes.post("/reviews", validateReview, ReviewController.create);
+routes.get("/reviews", ReviewController.getAll);
+routes.get("/reviews/:id", ReviewController.getById);
+routes.put("/reviews/:id", validateReviewUpdate, ReviewController.update);
+routes.delete("/reviews/:id", ReviewController.delete);
+routes.get("/reviews/product/:productId", ReviewController.getProductReviews);
+routes.put("/reviews/:id/status", validateReviewStatus, ReviewController.updateStatus);
+// --- ROTAS DE LISTA DE DESEJOS ---
+routes.get("/wishlist", WishlistController.get);
+routes.post("/wishlist/items", validateWishlistItem, WishlistController.addItem);
+routes.put("/wishlist/items/:productId", validateWishlistItemUpdate, WishlistController.updateItem);
+routes.delete("/wishlist/items/:productId", WishlistController.removeItem);
+routes.put("/wishlist/settings", validateWishlistSettings, WishlistController.updateSettings);
+routes.delete("/wishlist/clear", WishlistController.clear);
+
 
 module.exports = routes;
