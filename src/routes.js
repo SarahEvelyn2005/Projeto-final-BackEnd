@@ -5,11 +5,13 @@ const routes = express.Router();
 const UserController = require("./controllers/UserController");
 const OrderController = require("./controllers/OrderController");
 const ProductController = require("./controllers/ProductController");
+const CategoryController = require("./controllers/categoryController");
 
 // Importar Middlewares de Validação
 const validateUser = require("./middlewares/validateUser");
 const validateOrder = require("./middlewares/validateOrder");
 const validateProduct = require("./middlewares/validateProduct");
+const validateCategory = require("./validators/validateCategory");
 
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
@@ -29,4 +31,10 @@ routes.get("/products", ProductController.getAll);
 routes.get("/products/:id", ProductController.getById);
 routes.put("/products/:id", validateProduct, ProductController.update);
 routes.delete("/products/:id", ProductController.delete);
+// --- ROTAS DE CATEGORIAS ---
+routes.post("/products", validateCategory, CategoryController.create);
+routes.get("/products", CategoryController.getAll);
+routes.get("/products/:id", CategoryController.getById);
+routes.put("/products/:id", validateCategory, CategoryController.update);
+routes.delete("/products/:id", CategoryController.delete);
 module.exports = routes;
