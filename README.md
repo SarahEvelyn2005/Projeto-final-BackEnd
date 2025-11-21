@@ -129,9 +129,9 @@ Abaixo descrevemos a participação de cada membro na construção do projeto, i
 
 - **GitHub:** `@Raphael999-lab’s `
 - **Contribuições:**
--    Desenvolvimento do CRUD Payment
--    Desenvolvimento do CRUD Review
--    Desenvolvimento do CRUD Wishlist
+- Desenvolvimento do CRUD Payment
+-  Desenvolvimento do CRUD Review
+-  Desenvolvimento do CRUD Wishlist
 
 ### 5. Luis Matias
 
