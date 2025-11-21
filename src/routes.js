@@ -5,13 +5,15 @@ const routes = express.Router();
 const UserController = require("./controllers/UserController");
 const OrderController = require("./controllers/OrderController");
 const ProductController = require("./controllers/ProductController");
-const CategoryController = require("./controllers/categoryController");
+const CategoryController = require("./controllers/CategoryController");
+const SupplierController = require("./controllers/SupplierController");
 
 // Importar Middlewares de Validação
 const validateUser = require("./middlewares/validateUser");
 const validateOrder = require("./middlewares/validateOrder");
 const validateProduct = require("./middlewares/validateProduct");
 const validateCategory = require("./middlewares/validateCategory");
+const validateSupplier = require("./middlewares/validateSupplier");
 
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
@@ -32,9 +34,16 @@ routes.get("/products/:id", ProductController.getById);
 routes.put("/products/:id", validateProduct, ProductController.update);
 routes.delete("/products/:id", ProductController.delete);
 // --- ROTAS DE CATEGORIAS ---
-routes.post("/products", validateCategory, CategoryController.create);
-routes.get("/products", CategoryController.getAll);
-routes.get("/products/:id", CategoryController.getById);
-routes.put("/products/:id", validateCategory, CategoryController.update);
-routes.delete("/products/:id", CategoryController.delete);
+routes.post("/categories", validateCategory, CategoryController.create);
+routes.get("/categories", CategoryController.getAll);
+routes.get("/categories/:id", CategoryController.getById);
+routes.put("/categories/:id", validateCategory, CategoryController.update);
+routes.delete("/categories/:id", CategoryController.delete);
+// --- ROTAS DE ESTOQUE ---
+routes.post("/suppliers", validateSupplier, SupplierController.create);
+routes.get("/suppliers", SupplierController.getAll);
+routes.get("/suppliers/:id", SupplierController.getById);
+routes.put("/suppliers/:id", validateSupplier, SupplierController.update);
+routes.delete("/suppliers/:id", SupplierController.delete);
+
 module.exports = routes;
