@@ -39,7 +39,7 @@ routes.get("/categories", CategoryController.getAll);
 routes.get("/categories/:id", CategoryController.getById);
 routes.put("/categories/:id", validateCategory, CategoryController.update);
 routes.delete("/categories/:id", CategoryController.delete);
-// --- ROTAS DE ESTOQUE ---
+// --- ROTAS DE FORNECEDORES ---
 routes.post("/suppliers", validateSupplier, SupplierController.create);
 routes.get("/suppliers", SupplierController.getAll);
 routes.get("/suppliers/:id", SupplierController.getById);
