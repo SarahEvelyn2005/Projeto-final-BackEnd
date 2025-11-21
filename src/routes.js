@@ -7,6 +7,8 @@ const OrderController = require("./controllers/OrderController");
 const ProductController = require("./controllers/ProductController");
 const CategoryController = require("./controllers/CategoryController");
 const SupplierController = require("./controllers/SupplierController");
+const AddressController = require("./controllers/AddressController");
+const CuponsController = require("./controllers/CuponsController");
 const PaymentController = require("./controllers/paymentController");
 const ReviewController = require("./controllers/ReviewController");
 const WishlistController = require("./controllers/WishlistController");
@@ -17,6 +19,8 @@ const validateOrder = require("./middlewares/validateOrder");
 const validateProduct = require("./middlewares/validateProduct");
 const validateCategory = require("./middlewares/validateCategory");
 const validateSupplier = require("./middlewares/validateSupplier");
+const validateAddress = require("./middlewares/validateAddress");
+const validateCupons = require("./middlewares/validateCupons");
 const { validatePayment, validatePaymentStatus } = require("./middlewares/validatePayment");
 const { validateReview, validateReviewUpdate, validateReviewStatus } = require("./middlewares/validateReview");
 const { validateWishlistItem, validateWishlistSettings, validateWishlistItemUpdate } = require("./middlewares/validateWishlist");
@@ -80,5 +84,18 @@ routes.put("/wishlist/items/:productId", validateWishlistItemUpdate, WishlistCon
 routes.delete("/wishlist/items/:productId", WishlistController.removeItem);
 routes.put("/wishlist/settings", validateWishlistSettings, WishlistController.updateSettings);
 routes.delete("/wishlist/clear", WishlistController.clear);
+
+// --- ROTAS DE CUPONS ---
+routes.post("/cupons", validateCupons, CuponsController.create);
+routes.get("/cupons", CuponsController.getAll);
+routes.get("/cupons/:id", CuponsController.getById);
+routes.put("/cupons/:id", validateCupons, CuponsController.update);
+routes.delete("/cupons/:id", CuponsController.delete);
+// --- ROTAS DE ENDEREÇOS ---
+routes.post("/address", validateAddress, AddressController.create);
+routes.get("/address", AddressController.getAll);
+routes.get("/address/:id", AddressController.getById);
+routes.put("/address/:id", validateAddress, AddressController.update);
+routes.delete("/address/:id", AddressController.delete);
 
 module.exports = routes;
