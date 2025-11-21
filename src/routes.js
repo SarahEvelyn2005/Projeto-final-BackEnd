@@ -9,6 +9,10 @@ const CategoryController = require("./controllers/CategoryController");
 const SupplierController = require("./controllers/SupplierController");
 const AddressController = require("./controllers/AddressController");
 const CouponController = require("./controllers/CouponController");
+const PaymentController = require("./controllers/paymentController");
+const ReviewController = require("./controllers/ReviewController");
+const WishlistController = require("./controllers/WishlistController");
+
 
 // Importar Middlewares de Validação
 const validateUser = require("./middlewares/validateUser");
@@ -18,7 +22,9 @@ const validateCategory = require("./middlewares/validateCategory");
 const validateSupplier = require("./middlewares/validateSupplier");
 const validateAddress = require("./middlewares/validateAddress");
 const validateCoupon = require("./middlewares/validateCoupon");
-
+const { validatePayment, validatePaymentStatus } = require("./middlewares/validatePayment");
+const { validateReview, validateReviewUpdate, validateReviewStatus } = require("./middlewares/validateReview");
+const { validateWishlistItem, validateWishlistSettings, validateWishlistItemUpdate } = require("./middlewares/validateWishlist");
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
 routes.get("/users", UserController.getAll);
