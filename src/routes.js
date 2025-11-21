@@ -91,6 +91,7 @@ routes.get("/cupons", CuponsController.getAll);
 routes.get("/cupons/:id", CuponsController.getById);
 routes.put("/cupons/:id", validateCupons, CuponsController.update);
 routes.delete("/cupons/:id", CuponsController.delete);
+
 // --- ROTAS DE ENDEREÇOS ---
 routes.post("/address", validateAddress, AddressController.create);
 routes.get("/address", AddressController.getAll);
