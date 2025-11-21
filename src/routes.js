@@ -11,7 +11,7 @@ const CategoryController = require("./controllers/categoryController");
 const validateUser = require("./middlewares/validateUser");
 const validateOrder = require("./middlewares/validateOrder");
 const validateProduct = require("./middlewares/validateProduct");
-const validateCategory = require("./validators/validateCategory");
+const validateCategory = require("./middlewares/validateCategory");
 
 // --- ROTAS DE USUÁRIOS ---
 routes.post("/users", validateUser, UserController.create);
